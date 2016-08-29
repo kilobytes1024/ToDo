@@ -52,7 +52,7 @@ app.controller('toDo', function($scope,$ionicPopup,$timeout,toDos){
 
   
 
-// Triggered on a button click, or some other target
+// Triggered on a button click
   $scope.showPopup = function() {
     $scope.data = {};
 
@@ -69,7 +69,7 @@ app.controller('toDo', function($scope,$ionicPopup,$timeout,toDos){
           type: 'button-positive',
           onTap: function(e) {
             if (!$scope.data.newToDo) {
-              //don't allow the user to close unless he enters wifi password
+              
               e.preventDefault();
             } else {
               return $scope.data.newToDo;
