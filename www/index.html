@@ -34,17 +34,16 @@
 
         </div>
         
-      	<ion-list show-delete="true">
-		  <ion-item ng-repeat="todo in toDoList |  filter : {completedOn : null}|filter : search | orderBy: '-createdOn'" class="item item-icon-right" >
-		     {{todo.content}} : {{todo.createdOn}}
+        <div class="list">
+  
 
-		    <ion-delete-button class="icon ion-close pull-right" ng-click="completeToDo(todo)">
-    		</ion-delete-button>
-    		
-    		<!--button class="button icon ion-close pull-right" ng-click="console.log('tsts')"></button-->
-		  </ion-item>
-		</ion-list>
+   <div ng-repeat="todo in toDoList |  filter : {completedOn : null}|filter : search | orderBy: '-createdOn'" class="item item-icon-right">
+      <i class="icon ion-close-circled" ng-click="completeToDo(todo)"></i>
+      {{todo.content}} {{todo.createdOn}}
+   </div>
 
+   
+</div>
       </ion-content>
       <div class="bar bar-footer bar-calm">
    		<button class="button icon ion-plus pull-right" ng-click="showPopup()"></button>
